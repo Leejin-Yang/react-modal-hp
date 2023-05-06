@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 
-import './styles';
+import './modal.css';
 
 interface Props {
   children: React.ReactNode;
