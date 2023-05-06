@@ -1,4 +1,4 @@
-.backdrop {
+.modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -6,4 +6,43 @@
   left: 0;
 
   background: rgba(0, 0, 0, 0.35);
+}
+
+.modal-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 36px 16px;
+  border-radius: 4px 4px 0 0;
+  background: #fff;
+}
+
+.animation-bottom {
+  animation: 0.3s slideUp;
+}
+
+.animation-bottom.close {
+  bottom: -300px;
+  animation: 0.3s slideDown;
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -300px;
+  }
+
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: -300px;
+  }
 }

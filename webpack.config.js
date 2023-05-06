@@ -5,13 +5,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    library: 'react-modal-hp',
     libraryTarget: 'umd',
+    library: 'ReactModalHP',
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)?$/,
         exclude: /node_modules/,
         use: {
           loader: 'ts-loader',
