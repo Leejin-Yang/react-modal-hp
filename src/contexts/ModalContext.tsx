@@ -10,7 +10,7 @@ export const useModalContext = () => {
   const modalConfig = React.useContext(ModalContext);
 
   if (modalConfig === null || modalConfig === undefined) {
-    throw new Error('useModalContext must be used in react-modal-hp Modal');
+    throw new Error("useModalContext must be used in react-modal-hp's Modal");
   }
 
   return modalConfig;
