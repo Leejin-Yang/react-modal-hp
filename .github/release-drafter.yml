@@ -12,14 +12,13 @@ template: |
 categories:
   - title: '✨ Features'
     labels:
-      - '✨ Feature'
-      - '🎨 UI'
+      - 'enhancement'
   - title: '🐛 Bug Fixes'
     labels:
-      - '🐛 Bug'
-  - title: '🔧 Refactoring'
+      - 'bug'
+  - title: '📝 Documentation'
     labels:
-      - '🔧 Refactor'
+      - 'documentation'
   - title: '👏 ETC'
     label: '⚙️ Chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
