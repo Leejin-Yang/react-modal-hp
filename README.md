@@ -1,16 +1,10 @@
 # React Modal HP
 
-
-
 Modal Component with React and Typescript.
 
 리액트와 타입스크립트를 사용한 모달 컴포넌트.
 
-
-
 ## Installation
-
-
 
 ### In React App
 
@@ -22,15 +16,11 @@ npm install react-modal-hp
 yarn add react-modal-hp
 ```
 
-
-
 ## Before Use
 
 Before use, create a root div for the modal in `public/index.html`.
 
 사용 전 `public/index.html`에 모달의 root div를 생성해주세요.
-
-
 
 ```html
 <!-- public/index.html -->
@@ -47,11 +37,7 @@ Before use, create a root div for the modal in `public/index.html`.
 </body>
 ```
 
-
-
 ## Modal && useModal
-
-
 
 ### Import
 
@@ -60,10 +46,8 @@ import Modal from 'react-modal-hp';
 ```
 
 ```tsx
-import { useModal } from 'react-modal-hp'
+import { useModal } from 'react-modal-hp';
 ```
-
-
 
 ### Example
 
@@ -90,36 +74,28 @@ function App() {
 }
 ```
 
-
-
 ### Modal Props
 
-| Attribute | Type | Description | Default |
-| :-------: | :--: | :---------- | :-----: |
-| open | boolean |Indicates whether the modal is open or closed<br />모달이 열고 닫힌 상태||
-| onClose | () => void |A function to close the modal<br />모달을 닫는 함수||
-| position | ModalPosition |The position of the modal<br />모달의 위치|'bottom'|
-| animation | boolean \| undefined |Whether the modal should have an animation<br />모달 애니메이션 유무||
-| portal | Element |The root element of the modal<br />모달의 root가 되는 엘리먼트||
-| children | React.ReactNode |The contents of the modal<br />모달 컨텐츠||
-
-
+| Attribute |           Type           | Description                                                              | Default  |
+| :-------: | :----------------------: | :----------------------------------------------------------------------- | :------: |
+|   open    |         boolean          | Indicates whether the modal is open or closed<br />모달이 열고 닫힌 상태 |          |
+|  onClose  |        () => void        | A function to close the modal<br />모달을 닫는 함수                      |          |
+| position  | ModalPosition ('bottom') | The position of the modal<br />모달의 위치                               | 'bottom' |
+| animation |   boolean \| undefined   | Whether the modal should have an animation<br />모달 애니메이션 유무     |          |
+|  portal   |         Element          | The root element of the modal<br />모달의 root가 되는 엘리먼트           |          |
+| children  |     React.ReactNode      | The contents of the modal<br />모달 내부의 컨텐츠                        |          |
 
 ```tsx
-type ModalPosition = 'bottom'
+type ModalPosition = 'bottom';
 ```
-
-
 
 ### useModal Type
 
-| Property   | Type       | Description                                                  | Initial |
-| ---------- | ---------- | ------------------------------------------------------------ | ------- |
+| Property   | Type       | Description                                                              | Initial |
+| ---------- | ---------- | ------------------------------------------------------------------------ | ------- |
 | isOpen     | boolean    | Indicates whether the modal is open or closed<br />모달의 열고 닫힌 상태 | false   |
-| openModal  | () => void | A function to update isOpen to true<br />isOpen을 true로 업데이트 |         |
-| closeModal | () => void | A function to update isOpen to false<br />isOpen을 false로 업데이트 |         |
-
-
+| openModal  | () => void | A function to update isOpen to true<br />isOpen을 true로 업데이트        |         |
+| closeModal | () => void | A function to update isOpen to false<br />isOpen을 false로 업데이트      |         |
 
 ## useModalContext
 
@@ -131,15 +107,11 @@ The close function can be used inside.
 
 내부에서 모달 닫기 메서드를 사용할 수 있다.
 
-
-
 ### Import
 
 ```tsx
 import { useModalContext } from 'react-modal-hp';
 ```
-
-
 
 ### Example
 
@@ -151,6 +123,7 @@ function ModalContent() {
 
   const onClose = () => {
     // Perform the desired logic before closing.
+    // 모달이 닫히기 전 로직을 작성해서 사용.
     close();
   };
 
@@ -163,11 +136,8 @@ function ModalContent() {
 }
 ```
 
-
-
 ### Types
 
 | Property | Type       | Description                                          |
 | -------- | ---------- | ---------------------------------------------------- |
 | close    | () => void | A function to close the modal.<br />모달을 닫는 함수 |
-
